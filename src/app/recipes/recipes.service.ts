@@ -14,7 +14,7 @@ export class RecipesService {
       ingredients: ["French fries", "Tomatoes"],
     },
     {
-      id: "1",
+      id: "2",
       title: "Spaghetti",
       imageUrl:
         "https://assets.bonappetit.com/photos/57ae1afd53e63daf11a4e26f/16:9/w_1000,c_limit/chicken-schnitzel.jpg",
@@ -29,5 +29,9 @@ export class RecipesService {
 
   getRecipe(recipeId: string) {
     return { ...this.recipes.find((recipe) => recipe.id === recipeId) };
+  }
+
+  deleteRecipe(recipeId: string) {
+    this.recipes = this.recipes.filter((recipe) => recipe.id !== recipeId);
   }
 }

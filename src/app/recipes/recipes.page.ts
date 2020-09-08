@@ -19,7 +19,5 @@ export class RecipesPage implements OnInit, OnDestroy {
     console.log("ion did enter");
   }
 
-  ngOnDestroy() {
-    console.log("ng");
-  }
+  ngOnDestroy() {}
 }

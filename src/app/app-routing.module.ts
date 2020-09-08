@@ -13,14 +13,16 @@ const routes: Routes = [
     loadChildren: () =>
       import("./places/places.module").then((m) => m.PlacesPageModule),
   },
+
   {
-    path: "",
-    redirectTo: "recipes",
-    pathMatch: "full",
+    path: "bookings",
+    loadChildren: () =>
+      import("./bookings/bookings.module").then((m) => m.BookingsPageModule),
   },
   {
-    path: 'bookings',
-    loadChildren: () => import('./bookings/bookings.module').then( m => m.BookingsPageModule)
+    path: "",
+    redirectTo: "places",
+    pathMatch: "full",
   },
 ];
 

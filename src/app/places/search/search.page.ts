@@ -18,4 +18,8 @@ export class SearchPage implements OnInit {
   ionViewWillEnter() {
     this.places = this.placesService.Places;
   }
+
+  onClick() {
+    console.log("CLICK");
+  }
 }

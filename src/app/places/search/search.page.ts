@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { SegmentChangeEventDetail } from "@ionic/core";
 import { PlacesService } from "../places.service";
 import { Place } from "../place.model";
 
@@ -15,11 +16,7 @@ export class SearchPage implements OnInit {
     this.places = this.placesService.Places;
   }
 
-  ionViewWillEnter() {
-    this.places = this.placesService.Places;
-  }
-
-  onClick() {
-    console.log("CLICK");
+  onFilterUpdate(event: CustomEvent<SegmentChangeEventDetail>) {
+    console.log(event.detail);
   }
 }
